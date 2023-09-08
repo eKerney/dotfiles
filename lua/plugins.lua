@@ -63,6 +63,10 @@ return require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use "b0o/schemastore.nvim"  
+  use "b0o/schemastore.nvim"
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
 end)
 
